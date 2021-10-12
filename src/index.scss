@@ -1,0 +1,79 @@
+
+.container{
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+}
+
+.card{
+    border: 1px solid lightblue;
+    border-radius: 20px;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 1px 10px 20px  lightgray;
+    margin-bottom: 30px;
+    .name{
+        font-size: 20px;
+        font-family: sans-serif;
+        margin: 10px 0;
+    }
+    .avatar{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 1px solid lightskyblue;
+        box-shadow: 1px 5px 10px lightgray;
+        background-size: cover;
+    }
+
+    .points{
+        font-size: 40px;
+        font-family: sans-serif;
+        margin: 20px 0;
+    }
+    .buttons{
+        display: flex;
+        flex-flow: row;
+        width: 100%;
+        justify-content: space-evenly;
+        div{
+            width: 80px;
+            height: 60px;
+            border-radius: 20px;
+            box-shadow: 1px 5px 10px lightgray;
+            font-size: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: sans-serif;
+        }
+        .disminuir{
+            background-color: rgb(172, 20, 53);
+        }
+        .aumentar{
+            background-color: rgb(32, 82, 148);
+        }
+    }
+}
+
+.title{
+    font-family: sans-serif;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    div{
+        width: 10px;
+        height: 10px;
+        background-color: gray;
+        margin-left: 20px;
+        border-radius: 50%;
+    }
+}
