@@ -8,9 +8,7 @@ function App() {
 
   const [players, setPlayers] = useState([])
   
-  // TODO: descomentar
-  // const {socket, onLine} = useSocket('https://score-server-z.herokuapp.com/')
-  const {socket, onLine} = useSocket('localhost:8080')
+  const {socket, onLine} = useSocket('https://score-server-z.herokuapp.com/')
 
 
   useEffect(() => {
