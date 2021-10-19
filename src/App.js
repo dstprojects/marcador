@@ -2,15 +2,15 @@ import { useEffect, useState } from "react";
 
 import { Player } from "./components/Player";
 import { useSocket } from "./hooks/useSocket";
-// import { useLoginStore } from "./store/useLoginStore";
 
 
 function App() {
 
   const [players, setPlayers] = useState([])
-  // const {login} = useLoginStore();
   
-  const {socket, onLine} = useSocket('https://score-server-z.herokuapp.com/')
+  // TODO: descomentar
+  // const {socket, onLine} = useSocket('https://score-server-z.herokuapp.com/')
+  const {socket, onLine} = useSocket('localhost:8080')
 
 
   useEffect(() => {
@@ -21,12 +21,12 @@ function App() {
     
   }, [socket])
 
-  const aumentar = (id) => {
-    socket.emit('aumentar', id );
+  const aumentar = (uid) => {
+    socket.emit('aumentar', uid );
   }
 
-  const disminuir = (id) => {
-    socket.emit('disminuir', id );
+  const disminuir = (uid) => {
+    socket.emit('disminuir', uid );
   }
 
 
@@ -42,8 +42,8 @@ function App() {
           score={player.votes} 
           aumentar={aumentar} 
           disminuir={disminuir} 
-          key={player.id}
-          id={player.id}
+          key={player.uid}
+          uid={player.uid}
         />)
       }
     </div>
